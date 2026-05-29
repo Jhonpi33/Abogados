@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mejía & Asociados — Estudio Jurídico</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Cormorant+SC:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+    <header class="encabezado" id="inicio">
+        <div class="encabezado__marca">
+            <span class="encabezado__siglas">MjA</span>
+            <span class="encabezado__nombre">Mejía &amp; Asociados</span>
+        </div>
+
+        <nav class="encabezado__nav" id="navegacion" role="navigation" aria-label="Navegación principal">
+            <a class="enlace-nav" href="#inicio">Inicio</a>
+            <a class="enlace-nav" href="#firma">Firma</a>
+            <a class="enlace-nav" href="#areas">Servicios</a>
+            <a class="enlace-nav" href="#equipo">Equipo</a>
+            <a class="enlace-nav" href="#contacto">Contacto</a>
+        </nav>
+
+        <input type="checkbox" id="menu-activo" class="menu-activo" aria-hidden="true">
+        <label for="menu-activo" class="menu-hamburguesa" aria-label="Abrir menú">
+            <span></span><span></span><span></span>
+        </label>
+    </header>
+
+    <!-- BARRA DE PROGRESO -->
+    <div class="barra-progreso" id="barraProgreso" aria-hidden="true"></div>
+
+    <!-- HERO -->
+    <section class="inicio" id="hero">
+        <div class="inicio__contenedor-video">
+            <video autoplay muted loop playsinline class="inicio__video-fondo">
+                <source src="video/INTRODUCION.mp4" type="video/mp4">
+            </video>
+            <div class="inicio__degradado" aria-hidden="true"></div>
+        </div>
+
+        <div class="inicio__contenido animar-entrada">
+            <p class="inicio__etiqueta">Estudio Jurídico · Fundado en 2004</p>
+            <h1 class="inicio__titulo">
+                El blindaje legal de las grandes decisiones empresariales
+            </h1>
+            <p class="inicio__descripcion">
+                Más de 20 años de trayectoria, liderando la defensa y estructuración jurídica de las corporaciones más importantes.
+            </p>
+            <div class="inicio__botones">
+                <button class="boton-principal" onclick="document.getElementById('contacto').scrollIntoView({behavior:'smooth'})">Solicitar Consulta</button>
+                <button class="boton-secundario" onclick="document.getElementById('firma').scrollIntoView({behavior:'smooth'})">Conocer Firma</button>
+            </div>
+        </div>
+
+        <div class="inicio__indicador-scroll" aria-hidden="true">
+            <span class="indicador__texto">Descubrir</span>
+            <div class="indicador__linea"></div>
+        </div>
+    </section>
+
+   
+
+    <!-- ÁREAS DE PRÁCTICA -->
+    <section class="areas" id="areas">
+        <div class="areas__encabezado revelar">
+            <p class="etiqueta-seccion etiqueta-seccion--clara">Nuestras Áreas</p>
+            <h2 class="areas__titulo">Excelencia Técnica en Cada Dimensión</h2>
+            <p class="areas__subtitulo">Cobertura jurídica integral para todas las necesidades de su empresa.</p>
+        </div>
+
+        <div class="areas__cuadricula">
+            <article class="tarjeta-area revelar" >
+                <span class="tarjeta-area__numero">01</span>
+                <h3 class="tarjeta-area__nombre">Derecho Laboral</h3>
+                <p class="tarjeta-area__descripcion">Asesoría en procesos, contratos y gestión jurídica de relaciones laborales empresariales.</p>
+                <span class="tarjeta-area__mas" aria-hidden="true">→</span>
+            </article>
+
+            <article class="tarjeta-area revelar" >
+                <span class="tarjeta-area__numero">02</span>
+                <h3 class="tarjeta-area__nombre">Derecho Comercial</h3>
+                <p class="tarjeta-area__descripcion">Acompañamiento legal en negocios, sociedades, inversiones y operaciones comerciales.</p>
+                <span class="tarjeta-area__mas" aria-hidden="true">→</span>
+            </article>
+
+            <article class="tarjeta-area revelar" >
+                <span class="tarjeta-area__numero">03</span>
+                <h3 class="tarjeta-area__nombre">Derecho de Familia</h3>
+                <p class="tarjeta-area__descripcion">Regulamos relaciones jurídicas derivadas del matrimonio, parentesco y uniones familiares.</p>
+                <span class="tarjeta-area__mas" aria-hidden="true">→</span>
+            </article>
+
+            <article class="tarjeta-area revelar" >
+                <span class="tarjeta-area__numero">04</span>
+                <h3 class="tarjeta-area__nombre">Derecho Civil</h3>
+                <p class="tarjeta-area__descripcion">Soluciones legales sobre patrimonio, obligaciones y relaciones civiles entre personas.</p>
+                <span class="tarjeta-area__mas" aria-hidden="true">→</span>
+            </article>
+
+            <article class="tarjeta-area revelar" >
+                <span class="tarjeta-area__numero">05</span>
+                <h3 class="tarjeta-area__nombre">Asesoría Empresarial</h3>
+                <p class="tarjeta-area__descripcion">Estrategias jurídicas para fortalecer empresas y garantizar crecimiento seguro sostenible.</p>
+                <span class="tarjeta-area__mas" aria-hidden="true">→</span>
+            </article>
+
+            <article class="tarjeta-area revelar" >
+                <span class="tarjeta-area__numero">06</span>
+                <h3 class="tarjeta-area__nombre">Representación Judicial</h3>
+                <p class="tarjeta-area__descripcion">Defensa legal y representación efectiva en procesos judiciales y administrativos complejos.</p>
+                <span class="tarjeta-area__mas" aria-hidden="true">→</span>
+            </article>
+
+            <article class="tarjeta-area revelar" >
+                <span class="tarjeta-area__numero">07</span>
+                <h3 class="tarjeta-area__nombre">Consultoría Corporativa</h3>
+                <p class="tarjeta-area__descripcion">Acompañamiento jurídico estratégico para decisiones empresariales, contratos e inversiones.</p>
+                <span class="tarjeta-area__mas" aria-hidden="true">→</span>
+            </article>
+
+            <article class="tarjeta-area revelar" >
+                <span class="tarjeta-area__numero">08</span>
+                <h3 class="tarjeta-area__nombre">Elaboración de Contratos</h3>
+                <p class="tarjeta-area__descripcion">Redacción profesional de contratos civiles y comerciales adaptados a cada necesidad.</p>
+                <span class="tarjeta-area__mas" aria-hidden="true">→</span>
+            </article>
+        </div>
+    </section>
+
+    <!-- EQUIPO -->
+    <section class="equipo" id="equipo">
+        <div class="equipo__encabezado revelar">
+            <p class="etiqueta-seccion">Equipo Legal</p>
+            <h2 class="equipo__titulo">Mentes que definen el Derecho</h2>
+            <p class="equipo__subtitulo">Un equipo de abogados especializados en derecho corporativo.</p>
+        </div>
+
+        <div class="equipo__cuadricula">
+            <article class="tarjeta-abogado revelar" >
+                <div class="tarjeta-abogado__imagen-contenedor">
+                    <img src="/img/DR.Roberto Mejia" alt="Dr. Roberto Mejía" class="tarjeta-abogado__imagen">
+                    <div class="tarjeta-abogado__velo" aria-hidden="true"></div>
+                    <div class="tarjeta-abogado__anios">
+                        <span class="contador" data-objetivo="20" data-sufijo=" años">0</span>
+                        <small>de experiencia</small>
+                    </div>
+                </div>
+                <div class="tarjeta-abogado__info">
+                    <h3 class="tarjeta-abogado__nombre">Dr. Roberto Mejía</h3>
+                    <p class="tarjeta-abogado__cargo">Fundador y socio principal</p>
+                    <p class="tarjeta-abogado__especialidad">Derecho Corporativo · Litigio Internacional</p>
+                </div>
+            </article>
+
+            <article class="tarjeta-abogado revelar" >
+                <div class="tarjeta-abogado__imagen-contenedor">
+                    <img src="/img/DR.jpg" alt="Dra. Elena Valdés" class="tarjeta-abogado__imagen">
+                    <div class="tarjeta-abogado__velo" aria-hidden="true"></div>
+                    <div class="tarjeta-abogado__anios">
+                        <span class="contador" data-objetivo="15" data-sufijo=" años">0</span>
+                        <small>de experiencia</small>
+                    </div>
+                </div>
+                <div class="tarjeta-abogado__info">
+                    <h3 class="tarjeta-abogado__nombre">Dra. Elena Valdés</h3>
+                    <p class="tarjeta-abogado__cargo">Socia — Derecho Comercial</p>
+                    <p class="tarjeta-abogado__especialidad">Contratos · M&amp;A · Inversión extranjera</p>
+                </div>
+            </article>
+
+            <article class="tarjeta-abogado revelar" >
+                <div class="tarjeta-abogado__imagen-contenedor">
+                    <img src="abogado2.jpg" alt="Dr. Sergio Arango" class="tarjeta-abogado__imagen">
+                    <div class="tarjeta-abogado__velo" aria-hidden="true"></div>
+                    <div class="tarjeta-abogado__anios">
+                        <span class="contador" data-objetivo="12" data-sufijo=" años">0</span>
+                        <small>de experiencia</small>
+                    </div>
+                </div>
+                <div class="tarjeta-abogado__info">
+                    <h3 class="tarjeta-abogado__nombre">Dr. Sergio Arango</h3>
+                    <p class="tarjeta-abogado__cargo">Socio — Litigio Empresarial</p>
+                    <p class="tarjeta-abogado__especialidad">Arbitraje · Procesos ejecutivos · Recursos</p>
+                </div>
+            </article>
+
+            <article class="tarjeta-abogado revelar" >
+                <div class="tarjeta-abogado__imagen-contenedor">
+                    <img src="abogada2.jpg" alt="Dra. Carolina Pinto" class="tarjeta-abogado__imagen">
+                    <div class="tarjeta-abogado__velo" aria-hidden="true"></div>
+                    <div class="tarjeta-abogado__anios">
+                        <span class="contador" data-objetivo="9" data-sufijo=" años">0</span>
+                        <small>de experiencia</small>
+                    </div>
+                </div>
+                <div class="tarjeta-abogado__info">
+                    <h3 class="tarjeta-abogado__nombre">Dra. Carolina Pinto</h3>
+                    <p class="tarjeta-abogado__cargo">Asociada Senior — Familia y Civil</p>
+                    <p class="tarjeta-abogado__especialidad">Derecho de Familia · Patrimonio · Sucesiones</p>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- HITOS -->
+    <section class="hitos" id="hitos">
+        <div class="hitos__encabezado revelar">
+            <p class="etiqueta-seccion etiqueta-seccion--clara">Casos Destacados</p>
+            <h2 class="hitos__titulo">Hitos de Arquitectura Legal</h2>
+        </div>
+
+        <div class="hitos__cuadricula">
+            <article class="tarjeta-hito revelar" >
+                <div class="tarjeta-hito__icono" aria-hidden="true"></div>
+                <span class="tarjeta-hito__cifra">$500M+</span>
+                <p class="tarjeta-hito__descripcion">Recuperación en arbitraje internacional del sector energético.</p>
+            </article>
+
+            <article class="tarjeta-hito revelar" >
+                <div class="tarjeta-hito__icono" aria-hidden="true"></div>
+                <span class="tarjeta-hito__cifra">Holding Internacional</span>
+                <p class="tarjeta-hito__descripcion">Reestructuración jurídica empresarial con operaciones en cinco países.</p>
+            </article>
+
+            <article class="tarjeta-hito revelar" >
+                <div class="tarjeta-hito__icono" aria-hidden="true"></div>
+                <span class="tarjeta-hito__cifra">300+ contratos</span>
+                <p class="tarjeta-hito__descripcion">Auditoría laboral completa para multinacional de manufactura.</p>
+            </article>
+
+            <article class="tarjeta-hito revelar" >
+                <div class="tarjeta-hito__icono" aria-hidden="true"></div>
+                <span class="tarjeta-hito__cifra">Fusión estratégica</span>
+                <p class="tarjeta-hito__descripcion">Asesoría completa en fusión de dos grupos financieros de capital privado.</p>
+            </article>
+        </div>
+    </section>
+
+    <!-- MÉTODO -->
+    <section class="metodo" id="metodo">
+        <div class="metodo__encabezado revelar">
+            <p class="etiqueta-seccion">Nuestro Método</p>
+            <h2 class="metodo__titulo">Precisión en Cuatro Etapas</h2>
+        </div>
+
+        <div class="metodo__pasos">
+            <article class="paso revelar">
+                <div class="paso__numero" aria-hidden="true">01</div>
+                <div class="paso__conector" aria-hidden="true"></div>
+                <h3 class="paso__nombre">Consulta inicial</h3>
+                <p class="paso__descripcion">Evaluación inicial del caso, análisis de viabilidad y definición del alcance del servicio jurídico.</p>
+            </article>
+
+            <article class="paso revelar">
+                <div class="paso__numero" aria-hidden="true">02</div>
+                <div class="paso__conector" aria-hidden="true"></div>
+                <h3 class="paso__nombre">Diagnóstico</h3>
+                <p class="paso__descripcion">Análisis jurídico completo del expediente, jurisprudencia aplicable y riesgos identificados.</p>
+            </article>
+
+            <article class="paso revelar">
+                <div class="paso__numero" aria-hidden="true">03</div>
+                <div class="paso__conector" aria-hidden="true"></div>
+                <h3 class="paso__nombre">Propuesta</h3>
+                <p class="paso__descripcion">Diseño de solución legal personalizada y presentación detallada al cliente para su aprobación.</p>
+            </article>
+
+            <article class="paso revelar">
+                <div class="paso__numero" aria-hidden="true">04</div>
+                <div class="paso__conector paso__conector--ultimo" aria-hidden="true"></div>
+                <h3 class="paso__nombre">Ejecución</h3>
+                <p class="paso__descripcion">Representación profesional y seguimiento permanente hasta la resolución favorable del caso.</p>
+            </article>
+        </div>
+    </section>
+
+    <!-- CLIENTES -->
+    <section class="clientes" id="clientes">
+        <p class="clientes__titulo">Empresas Asesoradas</p>
+        <div class="clientes__carrusel">
+            <img src="empresa1.png" alt="Cliente 1" class="clientes__logo">
+            <img src="empresa2.png" alt="Cliente 2" class="clientes__logo">
+            <img src="empresa3.png" alt="Cliente 3" class="clientes__logo">
+            <img src="empresa4.png" alt="Cliente 4" class="clientes__logo">
+            <img src="empresa5.png" alt="Cliente 5" class="clientes__logo">
+            <img src="empresa6.png" alt="Cliente 6" class="clientes__logo">
+        </div>
+    </section>
+
+    <!-- CONFERENCIAS -->
+    <section class="conferencias" id="conferencias">
+        <div class="conferencias__encabezado revelar">
+            <p class="etiqueta-seccion etiqueta-seccion--clara">Conocimiento Compartido</p>
+            <h2 class="conferencias__titulo">Conferencias y asesorías empresariales</h2>
+            <p class="conferencias__subtitulo">Conozca algunas de nuestras conferencias jurídicas y capacitaciones corporativas.</p>
+        </div>
+
+        <div class="conferencias__videos">
+            <div class="video-item revelar">
+                <iframe src="https://www.youtube.com/embed/VIDEO_1" title="Conferencia jurídica 1" frameborder="0" allowfullscreen loading="lazy"></iframe>
+            </div>
+            <div class="video-item revelar">
+                <iframe src="https://www.youtube.com/embed/VIDEO_2" title="Conferencia jurídica 2" frameborder="0" allowfullscreen loading="lazy"></iframe>
+            </div>
+            <div class="video-item revelar">
+                <iframe src="https://www.youtube.com/embed/VIDEO_3" title="Conferencia jurídica 3" frameborder="0" allowfullscreen loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section class="contacto" id="contacto">
+        <div class="contacto__encabezado revelar">
+            <p class="etiqueta-seccion etiqueta-seccion--clara">Contáctenos</p>
+            <h2 class="contacto__titulo">Inicie el blindaje jurídico que su empresa requiere</h2>
+            <p class="contacto__subtitulo">Contáctenos para una consulta profesional y confidencial.</p>
+        </div>
+
+        <div class="contacto__cuadricula">
+            <div class="info-contacto revelar">
+                <h3 class="info-contacto__titulo">Información de contacto</h3>
+
+                <div class="item-contacto">
+                    <span class="item-contacto__etiqueta">Ubicación</span>
+                    <p class="item-contacto__valor">Calle 123 #45-67, Bogotá, Colombia</p>
+                </div>
+                <div class="item-contacto">
+                    <span class="item-contacto__etiqueta">Teléfono</span>
+                    <p class="item-contacto__valor">+57 300 123 4567</p>
+                </div>
+                <div class="item-contacto">
+                    <span class="item-contacto__etiqueta">Correo electrónico</span>
+                    <p class="item-contacto__valor">contacto@mejia-asociados.com</p>
+                </div>
+                <div class="item-contacto">
+                    <span class="item-contacto__etiqueta">Horario de atención</span>
+                    <p class="item-contacto__valor">Lunes a Viernes — 8:00 AM a 6:00 PM</p>
+                </div>
+            </div>
+
+            <div class="formulario-contenedor revelar">
+                <h3 class="formulario-contenedor__titulo">Solicite una consulta</h3>
+
+                <div class="formulario">
+                    <div class="campo">
+                        <label class="campo__etiqueta" for="nombre">Nombre completo</label>
+                        <input class="campo__entrada" type="text" id="nombre" name="nombre" placeholder="Ej: Carlos Martínez" required>
+                    </div>
+
+                    <div class="campo">
+                        <label class="campo__etiqueta" for="correo">Correo electrónico</label>
+                        <input class="campo__entrada" type="email" id="correo" name="correo" placeholder="correo@empresa.com" required>
+                    </div>
+
+                    <div class="campo">
+                        <label class="campo__etiqueta" for="area">Área jurídica</label>
+                        <select class="campo__entrada campo__entrada--select" id="area" name="area">
+                            <option value="" disabled selected>Seleccione un área</option>
+                            <option value="laboral">Derecho Laboral</option>
+                            <option value="comercial">Derecho Comercial</option>
+                            <option value="civil">Derecho Civil</option>
+                            <option value="familia">Derecho de Familia</option>
+                            <option value="empresarial">Asesoría Empresarial</option>
+                            <option value="contratos">Elaboración de Contratos</option>
+                        </select>
+                    </div>
+
+                    <div class="campo">
+                        <label class="campo__etiqueta" for="urgencia">Nivel de urgencia</label>
+                        <select class="campo__entrada campo__entrada--select" id="urgencia" name="urgencia">
+                            <option value="" disabled selected>Seleccione la urgencia</option>
+                            <option value="normal">Normal — En los próximos días</option>
+                            <option value="prioritario">Prioritario — Esta semana</option>
+                            <option value="urgente">Urgente — Hoy mismo</option>
+                        </select>
+                    </div>
+
+                    <div class="campo campo--completo">
+                        <label class="campo__etiqueta" for="mensaje">Descripción del asunto</label>
+                        <textarea class="campo__entrada campo__entrada--textarea" id="mensaje" name="mensaje" placeholder="Describa brevemente su caso o consulta..." rows="5"></textarea>
+                    </div>
+
+                    <div class="campo campo--completo">
+                        <button type="button" class="boton-principal boton-principal--formulario" id="btnEnviar">
+                            Solicitar Consulta
+                        </button>
+                        <p class="formulario__confirmacion" id="confirmacion" aria-live="polite"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="pie">
+        <div class="pie__cuadricula">
+            <div class="pie__marca">
+                <p class="pie__siglas">MjA</p>
+                <p class="pie__descripcion">Especialistas legales en derecho corporativo y empresarial.</p>
+            </div>
+            <div class="pie__navegacion">
+                <p class="pie__nav-titulo">Navegación</p>
+                <nav aria-label="Pie de página">
+                    <a class="pie__enlace" href="#inicio">Inicio</a>
+                    <a class="pie__enlace" href="#firma">La Firma</a>
+                    <a class="pie__enlace" href="#areas">Servicios</a>
+                    <a class="pie__enlace" href="#equipo">Equipo</a>
+                    <a class="pie__enlace" href="#contacto">Contacto</a>
+                </nav>
+            </div>
+            <div class="pie__legal">
+                <p class="pie__nav-titulo">Legal</p>
+                <nav aria-label="Legal">
+                    <a class="pie__enlace" href="#">Política de privacidad</a>
+                    <a class="pie__enlace" href="#">Términos de servicio</a>
+                    <a class="pie__enlace" href="#">Código de ética</a>
+                </nav>
+            </div>
+            <div class="pie__contacto-rapido">
+                <p class="pie__nav-titulo">Contacto</p>
+                <p class="pie__dato">+57 300 123 4567</p>
+                <p class="pie__dato">contacto@mejia-asociados.com</p>
+                <p class="pie__dato">Bogotá, Colombia</p>
+            </div>
+        </div>
+        <div class="pie__linea-inferior">
+            <p class="pie__derechos">© 2026 Mejía &amp; Asociados. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Botón volver al inicio -->
+    <button class="btn-arriba" id="btnArriba" aria-label="Volver al inicio" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+    <script src="interacciones.js"></script>
+</body>
+</html>

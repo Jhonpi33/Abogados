@@ -1,0 +1,582 @@
+
+/*Paleta y tipografía*/
+:root {
+    /* Colores */
+    --color-azul:        #0B1F3A;
+    --color-azul-medio:  #112847;
+    --color-gris:        #D9D9D9;
+    --color-gris-suave:  #F2F2F0;
+    --color-blanco:      #FFFFFF;
+    --color-dorado:      #B08D57;
+    --color-dorado-claro:#C9A96E;
+    --color-dorado-oscuro:#8A6B3A;
+    --color-texto:       #1a1a1a;
+    --color-texto-suave: #555555;
+
+    /* Tipografías */
+    --fuente-principal:   Georgia, serif;
+    --fuente-versalitas:  Georgia, serif;
+
+    /* Espaciados */
+    --espaciado-xs:   8px;
+    --espaciado-s:    16px;
+    --espaciado-m:    32px;
+    --espaciado-l:    64px;
+    --espaciado-xl:   100px;
+
+    /* Bordes */
+    --radio-tarjeta:  4px;
+
+    /* Transición estándar */
+    --transicion:     0.35s ease;
+}
+
+/* RESET Y BASE*/
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; /**para que suba despacio y no de golpe*/
+}
+
+body {
+    font-family: var(--fuente-principal);
+    color: var(--color-texto);
+    background-color: var(--color-blanco);
+    font-size: 18px;
+    line-height: 1.7;
+    overflow-x: hidden;
+    margin: 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    /** Fondo transparente para imágenes con canal alpha */
+    background-color: transparent;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ETIQUETA DE SECCIÓN (texto pequeño decorativo)*/
+.etiqueta-seccion {
+    font-family: var(--fuente-versalitas);
+    font-size: 13px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--color-dorado);
+    margin-bottom: var(--espaciado-xs);
+    display: block;
+}
+
+.etiqueta-seccion--clara {
+    color: var(--color-dorado-claro);
+}
+
+/* 
+BOTONES*/
+.boton-principal {
+    font-family: var(--fuente-versalitas);
+    font-size: 30px;
+    letter-spacing: 3px;
+    background-color: var(--color-dorado);
+    color: var(--color-blanco);
+    border: none;
+    padding: 16px 40px;
+    cursor: pointer;
+    transition: background-color var(--transicion), transform var(--transicion);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Pseudo-elemento: efecto de brillo al pasar el ratón */
+.boton-principal::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.15);
+    transition: width var(--transicion);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.boton-principal:hover::after {
+    width: 100%;
+}
+
+.boton-principal:hover {
+    background-color: var(--color-dorado-oscuro);
+    transform: translateY(-2px);
+}
+
+.boton-secundario {
+    font-family: var(--fuente-versalitas);
+    font-size: 14px;
+    letter-spacing: 3px;
+    background-color: transparent;
+    color: var(--color-blanco);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    padding: 16px 40px;
+    cursor: pointer;
+    transition: border-color var(--transicion), color var(--transicion), background-color var(--transicion);
+}
+
+.boton-secundario:hover {
+    border-color: var(--color-dorado);
+    color: var(--color-blanco);
+    background-color: rgba(255, 155, 4, 0.08);
+}
+
+.boton-principal--formulario {
+    width: 100%;
+    padding: 18px;
+    margin-top: var(--espaciado-s);
+}
+
+/*ENCABEZADO / HEADER*/
+.encabezado {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 80px;
+    background-color: var(--color-azul);
+    border-bottom: 1px solid rgba(176,141,87,.2);
+    position: relative;
+} 
+
+
+/* Línea dorada decorativa debajo del encabezado */
+.encabezado::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 90%;
+    height: 2px;
+    transform: translateX(-50%);
+    background:
+    linear-gradient(
+        to right,
+        transparent,
+        var(--color-dorado),
+        transparent
+    );
+}
+
+.encabezado__marca {
+    display: flex;
+    align-items: baseline;
+    gap: var(--espaciado-s);
+}
+
+.encabezado__siglas {
+    font-family: var(--fuente-versalitas);
+    font-size: 26px;
+    color: var(--color-dorado);
+    letter-spacing: 2px;
+}
+
+.encabezado__nombre {
+    font-family: var(--fuente-versalitas);
+    font-size: 13px;
+    letter-spacing: 3px;
+    color: rgba(255, 255, 255, 0.55);
+    text-transform: uppercase;
+}
+
+.encabezado__nav {
+    display: flex;
+    gap: 48px;
+    align-items: center;
+}
+
+.enlace-nav {
+    font-family: var(--fuente-versalitas);
+    font-size: 13px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,.75);
+    position: relative;
+    padding-bottom: 6px;
+    display: flex;
+    align-items: center;
+    transition: .3s;
+}
+
+/* Línea dorada que aparece debajo */
+.enlace-nav::after {
+    content: '';
+    display: block;
+    height: 1px;
+    background-color: var(--color-dorado);
+    width: 0;
+    transition: width var(--transicion);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.enlace-nav:hover {
+    color: var(--color-dorado);
+}
+
+.enlace-nav:hover::after {
+    width: 100%;
+}
+
+
+
+/*SECCIÓN INICIO / HERO*/
+.inicio {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.inicio__contenedor-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.inicio__video-fondo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.inicio__degradado {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        105deg,
+        rgba(11, 31, 58, 0.88) 0%,
+        rgba(11, 31, 58, 0.55) 55%,
+        rgba(11, 31, 58, 0.25) 100%
+    );
+}
+
+.inicio__contenido {
+    position: relative;
+    color: var(--color-blanco);
+    max-width: 720px;
+    padding-left: 100px;
+}
+
+.inicio__etiqueta {
+    font-family: var(--fuente-versalitas);
+    font-size: 14px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: var(--color-dorado);
+    margin-bottom: 24px;
+    display: block;
+}
+
+.inicio__titulo {
+    font-size: 64px;
+    font-weight: 300;
+    line-height: 1.1;
+    margin-bottom: 28px;
+    font-style: italic;
+}
+
+.inicio__descripcion {
+    font-size: 20px;
+    font-weight: 300;
+    opacity: 0.85;
+    margin-bottom: 44px;
+    max-width: 560px;
+}
+
+.inicio__botones {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/*SECCIÓN FIRMA / SOBRE NOSOTROS*/
+.firma {
+    display: flex;
+    align-items: center;
+    gap: var(--espaciado-l);
+    padding: var(--espaciado-xl) 100px;
+    background-color: var(--color-blanco);
+}
+
+.firma__texto {
+    flex: 1 1 55%;
+}
+
+.firma__titulo {
+    font-size: 44px;
+    font-weight: 400;
+    line-height: 1.25;
+    color: var(--color-azul);
+    margin-bottom: 28px;
+    font-style: italic;
+}
+
+.firma__parrafo {
+    font-size: 17px;
+    color: var(--color-texto-suave);
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+
+.firma__metricas {
+    display: flex;
+    gap: 48px;
+    margin-top: 44px;
+    padding-top: 44px;
+    border-top: 1px solid var(--color-gris);
+}
+
+.metrica {
+    display: flex;
+    flex-direction: column;
+}
+
+.metrica__numero {
+    font-family: var(--fuente-versalitas);
+    font-size: 42px;
+    font-weight: 600;
+    color: var(--color-dorado);
+    line-height: 1;
+}
+
+.metrica__texto {
+    font-size: 13px;
+    letter-spacing: 1px;
+    color: var(--color-texto-suave);
+    margin-top: 6px;
+}
+
+.firma__imagen-lado {
+    flex: 1 1 40%;
+    min-height: 400px;
+    background-color: var(--color-gris-suave);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Ornamento decorativo — pseudo-elemento */
+.firma__ornamento::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 32px;
+    left: 32px;
+    right: 32px;
+    bottom: 32px;
+    border: 1px solid var(--color-dorado);
+    opacity: 0.35;
+}
+
+.firma__ornamento::after {
+    content: 'MjA';
+    display: block;
+    font-family: var(--fuente-versalitas);
+    font-size: 120px;
+    color: var(--color-dorado);
+    opacity: 0.07;
+    text-align: center;
+    line-height: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*SECCIÓN ÁREAS DE PRÁCTICA*/
+.areas {
+    background-color: var(--color-azul);
+    padding: var(--espaciado-xl) 80px;
+}
+
+.areas__encabezado {
+    text-align: center;
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 64px;
+}
+
+.areas__titulo {
+    font-size: 46px;
+    font-weight: 300;
+    color: var(--color-blanco);
+    font-style: italic;
+    margin-top: 12px;
+    margin-bottom: 16px;
+}
+
+.areas__subtitulo {
+    font-size: 17px;
+    color: rgba(255, 255, 255, 0.55);
+    font-weight: 300;
+}
+
+/* Grid de 4 columnas */
+.areas__cuadricula {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2px;
+}
+
+.tarjeta-area {
+    background-color: rgba(255, 255, 255, 0.04);
+    padding: 40px 32px;
+    border: 1px solid rgba(176, 141, 87, 0.12);
+    transition: background-color var(--transicion), border-color var(--transicion), transform var(--transicion);
+    cursor: default;
+}
+
+.tarjeta-area:hover {
+    background-color: rgba(176, 141, 87, 0.1);
+    border-color: rgba(176, 141, 87, 0.5);
+    transform: translateY(-4px);
+}
+
+.tarjeta-area__numero {
+    display: block;
+    font-family: var(--fuente-versalitas);
+    font-size: 11px;
+    letter-spacing: 4px;
+    color: var(--color-dorado);
+    margin-bottom: 20px;
+    opacity: 0.8;
+}
+
+.tarjeta-area__nombre {
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--color-blanco);
+    margin-bottom: 14px;
+    font-style: italic;
+}
+
+.tarjeta-area__descripcion {
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.55);
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+/*SECCIÓN EQUIPO*/
+.equipo {
+    padding: var(--espaciado-xl) 80px;
+    background-color: var(--color-gris-suave);
+}
+
+.equipo__encabezado {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.equipo__titulo {
+    font-size: 46px;
+    font-weight: 400;
+    color: var(--color-azul);
+    font-style: italic;
+    margin-top: 12px;
+    margin-bottom: 14px;
+}
+
+.equipo__subtitulo {
+    font-size: 17px;
+    color: var(--color-texto-suave);
+    font-weight: 300;
+}
+
+.equipo__cuadricula {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.tarjeta-abogado {
+    flex: 0 1 300px;
+    background-color: var(--color-blanco);
+    overflow: hidden;
+    box-shadow: 0 8px 40px rgba(11, 31, 58, 0.08);
+    transition: transform var(--transicion), box-shadow var(--transicion);
+}
+
+.tarjeta-abogado:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 60px rgba(11, 31, 58, 0.15);
+}
+
+.tarjeta-abogado__imagen-contenedor {
+    overflow: hidden;
+    height: 320px;
+    position: relative;
+}
+
+.tarjeta-abogado__imagen {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+    background-color: var(--color-gris);
+}
+
+.tarjeta-abogado:hover .tarjeta-abogado__imagen {
+    transform: scale(1.04);
+}
+
+/* Pseudo-elemento: velo dorado suave al hacer hover */
+.tarjeta-abogado__velo {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(176, 141, 87, 0);
+    transition: background-color var(--transicion);
+}
+
+.tarjeta-abogado:hover .tarjeta-abogado__velo {
+    background-color: rgba(176, 141, 87, 0.15);
+}
+
+.tarjeta-abogado__info {
+    padding: 28px 24px;
+    border-top: 3px solid var(--color-dorado);
+}
+
+.tarjeta-abogado__nombre {
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--color-azul);
+    margin-bottom: 6px;
+}
+
+.tarjeta-abogado__cargo {
+    font-family: var(--fuente-versalitas);
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: var(--color-dorado);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.tarjeta-abogado__especialidad {
+    font-size: 14px;
+    color: var(--color-texto-suave);
+    font-weight: 300;
+}
+
