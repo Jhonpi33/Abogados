@@ -1,0 +1,7 @@
+# Blueprint de Render: sitio corporativo Estudio Jurídico Mejía & Asociados
+services:
+  - type: web
+    name: abogados-mejia
+    runtime: static
+    buildCommand: ''
+    staticPublishPath: ./
